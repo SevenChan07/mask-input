@@ -1,0 +1,61 @@
+{
+  "name": "mask-input",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/mask-input.min.js",
+  "module": "es/mask-input.es.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "rollup -c rollup.config.dev.js -w",
+    "build": "rollup -c rollup.config.prod.js",
+    "lint": "eslint src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "inputmask-core": "^2.2.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "cssnano": "4.1.10",
+    "eslint": "^4.13.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^3.0.1",
+    "postcss-cssnext": " 3.1.0",
+    "postcss-nested": "4.1.2",
+    "postcss-simple-vars": "5.0.2",
+    "rollup": "^0.53.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-filesize": "^1.5.0",
+    "rollup-plugin-less": "^1.1.2",
+    "rollup-plugin-livereload": "^0.6.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-postcss": "2.0.3",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-serve": "^0.4.2",
+    "rollup-plugin-stylus": "^1.0.4",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-plugin-uglify-es": "0.0.1"
+  }
+}

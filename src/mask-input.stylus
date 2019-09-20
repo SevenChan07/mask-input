@@ -1,0 +1,4 @@
+.input-mask
+  outline none
+  &::placeholder
+    // opacity 0.8
